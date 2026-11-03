@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            height: 100vh;
+            width: 100%;
+            border: 1px solid black;
+        }
+        .header,.footer{
+            height: 20%;
+            width: 100%;
+            border: 1px solid black;
+            background-color: aqua;
+            text-align: center;
+            align-content: center;
+        }
+        .middle{
+            height: 60%;
+            width: 100%;
+            border: 1px solid black;
+            display: flex;
+        }
+        .left{
+            height: 100%;
+            width: 20%;
+            border: 1px solid black;
+            background-color: aquamarine;
+            text-align: center;
+            align-content: center;
+        }.right{
+            height: 100%;
+            width: 80%;
+            border: 1px solid black;
+        }
+        .top{
+            height: 50%;
+            width: 100%;
+            border: 1px solid black;
+            background-color: cornflowerblue;
+            text-align: center;
+            align-content: center;
+        }
+        .bottom{
+            height: 50%;
+            width: 100%;
+            border: 1px solid black;
+            display : flex;
+        }
+        .bottom1,.bottom2{
+            height: 100%;
+            width: 50%;
+            border: 1px solid black;
+            background-color: darkslateblue;
+            text-align: center;
+            align-content: center;
+        }
+        
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="header">
+            Header
+        </div>
+        <div class="middle">
+            <div class="left">Middle Left</div>
+            <div class="right">
+                <div class="top">
+                    Right Top
+                </div>
+                
+                <div class="bottom">
+                    <div class="bottom1">
+                        Bottom Left
+                    </div>
+                    <div class="bottom2">
+                        Bottom Right
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            Footer
+        </div>
+    </div>
+</body>
+</html>

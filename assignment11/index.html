@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: antiquewhite;
+        }
+        .square{
+            border-radius: 10px;
+            height: 100px;
+            width: 100px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            animation-iteration-count: infinite;
+            border: 1px solid black;
+            animation-duration: 3s;
+        }
+        .s1{
+            background-color: red;
+            animation-name: s01;
+        }
+        @keyframes s01 {
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: blue;
+            }
+        }
+        .s2{
+            background-color: blueviolet;
+            animation-name: s02;
+        }
+        @keyframes s02 {
+            0%{
+                transform: translate(0);
+            }
+            50%{
+                transform: translate(0,50px);
+            }
+            100%{
+                transform: translate(0,75px);
+            }
+
+        }
+        .s3{
+            background-color: darkgreen;
+            animation-name: s03;
+        }
+        @keyframes s03 {
+            0%{
+                transform: rotate(0);
+
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .s4{
+            background-color: orange;
+            animation-name: s04;
+        }
+        @keyframes s04 {
+            0%{
+                transform: scale(1);
+
+            }
+            50%{
+                transform: scale(1.5);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .s5{
+            background-color: grey;
+            animation-name: s05;
+        }
+        @keyframes s05 {
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .s6{
+            border: 10px solid lightgrey;
+            border-top: 10px solid blue;
+            border-radius: 50%;
+            animation-name: s03;
+        }
+        .box{
+            height: 280px;
+            width: 280px;
+            border: 2px dashed black;
+            overflow: hidden;
+            
+
+        }
+        .box-move{
+            height: 80px;
+            width: 80px;
+            background-color: green;
+            animation: s7 3s ease-in-out infinite;
+        }
+
+        @keyframes s7 {
+            0% { transform: translate(0px, 0px); }
+            25% { transform: translate(200px, 0px); }
+            50% { transform: translate(200px, 200px); }
+            75% { transform: translate(0px, 200px); }
+            100% { transform: translate(0px, 0px); }
+        }
+
+        .google{
+            display: flex;
+            gap: 5px;
+        }
+        .dot{
+            border-radius: 50%;
+            height: 25px;
+            width: 25px;
+            animation: move 0.4s cubic-bezier(1, 0.35, 0.65, 1) infinite;
+        }
+
+        @keyframes move {
+            0% { transform: translateY(0px);}
+            25% { transform: translateY(-6px);}
+            50% { transform: translateY(0px);}
+            75% { transform: translateY(6px);}
+            100% { transform: translateY(0px);}
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="square s1">color</div>
+        <div class="square s2">move</div>
+        <div class="square s3">rotate</div>
+        <div class="square s4">pulse</div>
+        <div class="square s5">fade</div>
+        <div class="square s6">spin</div>
+    </div>
+    <div class="con">
+        <div class="box">
+            <div class="box-move"></div>
+        </div>
+        <div class="google">
+            <div class="dot" style="background-color: red;"></div>
+            <div class="dot" style="background-color: yellow; animation-delay: 0.2s"></div>
+            <div class="dot" style="background-color: orange; animation-delay: 0.4s"></div>
+            <div class="dot" style="background-color: green; animation-delay: 0.6s"></div>
+            <div class="dot" style="background-color: blue; animation-delay: 0.8s"></div>
+        </div>
+    </div>
+</body>
+</html>
